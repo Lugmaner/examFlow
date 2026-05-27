@@ -6,20 +6,20 @@ public class Exam implements Schedulable{
     private String name;
     private LocalDate deadLine;
     private Difficulty difficulty;
-    private int estimatedStudyHours;
+    private long totalStudyHours;
 
-    public Exam(LocalDate deadLine, Difficulty difficulty, int estimatedStudyHours){
+    public Exam(LocalDate deadLine, Difficulty difficulty, long estimatedStudyHours){
         name = "unnamed";
         this.deadLine = deadLine;
         this.difficulty = difficulty;
-        this.estimatedStudyHours = estimatedStudyHours;
+        this.totalStudyHours = estimatedStudyHours;
     }
 
-    public Exam(String name, LocalDate deadLine, Difficulty difficulty, int estimatedStudyHours){
+    public Exam(String name, LocalDate deadLine, Difficulty difficulty, long estimatedStudyHours){
         this.name = name;
         this.deadLine = deadLine;
         this.difficulty = difficulty;
-        this.estimatedStudyHours = estimatedStudyHours;
+        this.totalStudyHours = estimatedStudyHours;
     }
 
     public String getName() {
@@ -31,7 +31,9 @@ public class Exam implements Schedulable{
     public Difficulty getDifficultyLevel(){
         return difficulty;
     }
-    public int getEstimatedStudyHours(){
-        return estimatedStudyHours;
+    public long getTotalStudyHours(){
+        return totalStudyHours;
     }
+
+
 }

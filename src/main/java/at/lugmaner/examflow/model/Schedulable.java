@@ -6,5 +6,5 @@ public interface Schedulable{
     String getName();
     LocalDate getDeadline();
     Difficulty getDifficultyLevel();
-    int getEstimatedStudyHours();
+    long getTotalStudyHours();
 }
